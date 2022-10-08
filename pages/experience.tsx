@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
 import Hamburger from '../components/hamburger'
 import { Parallax } from 'react-parallax';
 
