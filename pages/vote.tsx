@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
 import { ethers } from 'ethers'
-import styles from '../styles/Home.module.css'
 import Hamburger from '../components/hamburger'
 import { Button as MuiButton } from "@mui/material";
+import VoteItem from '../components/vote/voteItem'
+
 
 async function connectToMetamask(){
   // checks if metamask extension exists on chrome browser 
@@ -24,10 +25,9 @@ const Vote: NextPage = () => {
       <div id='outer-container'>
         <Hamburger pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
       </div> 
-      <div id="page-wrap" className={styles.container} >
-          <h1>This will be the vote page.</h1>
-          <h2></h2>
-          <MuiButton onClick={() => { connectToMetamask() }}> Connect </MuiButton> 
+      <div> 
+        <MuiButton onClick={() => { connectToMetamask() }}> Connect </MuiButton> 
+        <VoteItem />
       </div>
     </main>
   )
