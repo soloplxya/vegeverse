@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
 import Hamburger from '../components/hamburger'
 import { Parallax } from 'react-parallax';
 
@@ -17,7 +16,7 @@ const Mission: NextPage = () => {
         <div style={{ textAlign: 'center' }}>
         <Parallax bgImage={ image1 } strength={700} style={{ width: '100vw' }}>
           <div style={{ height: 400, width: '100vw' }} className="grid h-screen place-items-center">
-            <div className="text-3xl p-2">OUR MISSION</div>
+            <div className="text-7xl p-2">OUR MISSION</div>
           </div>
         </Parallax>
         <Parallax strength={700} style={{ width: '100vw' }}>

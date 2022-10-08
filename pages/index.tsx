@@ -21,8 +21,6 @@ const Home: NextPage = () => {
                 }}
                 onInit={(typewriter: any) => {
                   typewriter.typeString('<p style="color: #808080"> Welcome to <strong> Vegeverse </strong>!</p>')
-                    .pauseFor(300)
-                    .typeString('<p style="color: #000"> A solution that utilizes blockchain technology to help local farmers grow sustainably. </p>')
                     .callFunction(() => {
                       console.log('String typed out!');
                     })
@@ -35,6 +33,13 @@ const Home: NextPage = () => {
                 }}
               />
             </div> 
+          </div>
+        </Parallax>
+        <Parallax strength={600} style={{ width: '100vw' }}>
+          <div style={{ height: 600, width: '100vw' }} className="grid h-screen place-items-center">
+            <div className="text-3xl px-2 mx-10">
+              <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
           </div>
         </Parallax>
       </div>
