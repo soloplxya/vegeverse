@@ -3,6 +3,7 @@ import { ethers } from 'ethers'
 import Hamburger from '../components/hamburger'
 import { Button as MuiButton } from "@mui/material";
 import VoteItem from '../components/vote/voteItem'
+import styles from '../styles/Home.module.css'
 
 
 async function connectToMetamask(){
@@ -24,11 +25,11 @@ const Vote: NextPage = () => {
     <main> 
       <div id='outer-container'>
         <Hamburger pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+        <div className={styles.container}>
+          <MuiButton onClick={() => { connectToMetamask() }}> Connect </MuiButton> 
+          <VoteItem /> 
+        </div>
       </div> 
-      <div> 
-        <MuiButton onClick={() => { connectToMetamask() }}> Connect </MuiButton> 
-        <VoteItem />
-      </div>
     </main>
   )
 }
