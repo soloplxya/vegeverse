@@ -1,7 +1,7 @@
 import React from 'react';
-import { MenuItem }from './menuitem'
+import { MenuItem }from './menu-item'
 import { slide as Menu } from 'react-burger-menu';
-
+import ThemeToggleButton from './theme-toggle-button'
 
 export const Links = () => (<>
   <MenuItem name="Home" href="/" /> 
@@ -16,6 +16,7 @@ export const Links = () => (<>
 export default () => {
   return (
     <Menu>
+      <ThemeToggleButton class='pb-2'/>
       <Links />
     </Menu>
   );
