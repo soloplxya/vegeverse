@@ -2,14 +2,13 @@ import type { NextPage } from "next";
 
 import React  from "react";
 import { Badge, Box } from "@chakra-ui/react";
-import Image from "next/image";
-import { StarIcon } from "@chakra-ui/icons";
 
 const Community: NextPage = () => {
 
   return (
     <main>
       <div className="page-wrap grid grid-cols-5 mx-20">
+       
         <div className="col-start-2 col-span-3">
         <p className="font-bold py-2 text-xl">See whats happening in Vegeverse community:</p>
 
