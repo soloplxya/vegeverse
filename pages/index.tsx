@@ -20,7 +20,7 @@ const Home: NextPage = () => {
                   loop: true,
                 }}
                 onInit={(typewriter: any) => {
-                  typewriter.typeString('<p style="color: #808080"> Welcome to <strong> Vegeverse </strong>!</p>')
+                  typewriter.typeString('<p style="color: #808080"> Welcome to <strong> Vegeverse</strong>!</p>')
                     .callFunction(() => {
                       console.log('String typed out!');
                     })
