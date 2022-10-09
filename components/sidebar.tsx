@@ -50,7 +50,7 @@ export const Sidebar = () => {
           <DrawerHeader />
           <DrawerContent>
             <DrawerCloseButton />
-            <div class="p-2 pt-8">
+            <div className="p-2 pt-8">
               <ThemeToggleButton />
             </div>
             <Links />
