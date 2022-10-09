@@ -1,9 +1,16 @@
-import '../styles/globals.css'
-import '../styles/burger.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import "../styles/burger.css";
+import type { AppProps } from "next/app";
+import Chakra from "../components/chakra";
+import { Sidebar } from "../components/sidebar";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Chakra>
+      <Sidebar />
+      <Component {...pageProps} />
+    </Chakra>
+  );
 }
 
-export default MyApp
+export default MyApp;
