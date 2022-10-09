@@ -12,6 +12,7 @@ export default function Vote() {
   const [isConnected, setIsConnected] = useState(false);
   const [hasMetamask, setHasMetamask] = useState(false);
   const [signer, setSigner] = useState(undefined);
+  const [name, setName] = useState("");
 
   useEffect(() => {
     if (typeof window.ethereum !== "undefined") {
@@ -40,7 +41,9 @@ export default function Vote() {
       const tokenContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
       const governanceContractAddress = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9";
       const timelockContractAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
-
+      console.log(TokenAbi);
+      console.log(GovernanceAbi);
+      console.log(TimelockAbi);
       const tokenContract = new ethers.Contract(
         tokenContractAddress,
         TokenAbi,
@@ -58,6 +61,10 @@ export default function Vote() {
       );
 
       try {
+        console.log("here")
+        const val = await tokenContract.name();
+        console.log(val);
+        setName(val);
         // try a contract function
         // try functions here
       } catch (error) {
@@ -94,6 +101,9 @@ export default function Vote() {
             ) : (
               ""
             )}
+          </div>
+          <div> 
+            { name }
           </div>
 
           <VoteItem />
