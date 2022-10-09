@@ -12,6 +12,7 @@ export default function Vote() {
   const [isConnected, setIsConnected] = useState(false);
   const [hasMetamask, setHasMetamask] = useState(false);
   const [signer, setSigner] = useState(undefined);
+  const [name, setName] = useState("");
 
   useEffect(() => {
     if (typeof window.ethereum !== "undefined") {
@@ -60,6 +61,10 @@ export default function Vote() {
       );
 
       try {
+        console.log("here")
+        const val = await tokenContract.name();
+        console.log(val);
+        setName(val);
         // try a contract function
         // try functions here
       } catch (error) {
@@ -96,6 +101,9 @@ export default function Vote() {
             ) : (
               ""
             )}
+          </div>
+          <div> 
+            { name }
           </div>
 
           <VoteItem />
