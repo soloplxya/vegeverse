@@ -7,14 +7,15 @@ import { useEffect, useState } from "react";
 import GovernanceAbi from "../../pages/api/data/governance_abi.json";
 import { ethers } from "ethers";
 import {
-  Button,
   CardActionArea,
   CardActions,
   createTheme,
   ThemeProvider,
 } from "@mui/material";
 
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+
+import {
+  ChakraProvider, extendTheme, useDisclosure, Button} from "@chakra-ui/react";
 const theme = extendTheme();
 
 const muiTheme = createTheme();
@@ -24,6 +25,8 @@ const VoteItem = (props: any) => {
   const [isConnected, setIsConnected] = useState(false);
   const [hasMetamask, setHasMetamask] = useState(false);
   const [signer, setSigner] = useState(undefined);
+
+  const { proposalId } = props;
 
   useEffect(() => {
     if (typeof window.ethereum !== "undefined") {
@@ -59,7 +62,8 @@ const VoteItem = (props: any) => {
       );
       try {
         console.log(vote);
-        // await governanceContract.castVote(vote);
+        await governanceContract.castVote(proposalId, vote);
+        alert("Thanks for casting your vote!")
       } catch (error) {
         console.log(error);
       }
@@ -71,18 +75,19 @@ const VoteItem = (props: any) => {
   return (
     <ChakraProvider theme={theme} resetCSS>
       <ThemeProvider theme={muiTheme}>
-        <Card sx={{ maxWidth: 275, minHeight: 300 }}>
+        <Card sx={{
+          maxWidth: 275, minHeight: 400}}>
           <CardActionArea>
             <CardMedia component="img" image={src} />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h5" component="div" className="font-bold text-l">
                 {description}
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" onClick={() => connect(1)}>
-              Yes
+            <Button onClick={() => connect(1)}>
+                  Yes
             </Button>
             <Button size="small" onClick={() => connect(0)}>
               No
