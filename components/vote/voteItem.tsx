@@ -20,6 +20,7 @@ const theme = extendTheme();
 const muiTheme = createTheme();
 
 const VoteItem = (props: any) => {
+  const { src, description } = props;
   const [isConnected, setIsConnected] = useState(false);
   const [hasMetamask, setHasMetamask] = useState(false);
   const [signer, setSigner] = useState(undefined);
@@ -70,15 +71,12 @@ const VoteItem = (props: any) => {
   return (
     <ChakraProvider theme={theme} resetCSS>
       <ThemeProvider theme={muiTheme}>
-        <Card sx={{ maxWidth: 275, minHeight: 300 }} variant="outlined">
+        <Card sx={{ maxWidth: 275, minHeight: 300 }}>
           <CardActionArea>
-            <CardMedia component="img" image="/farm.jpg" />
+            <CardMedia component="img" image={src} />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                Preserve endangered wild life orchids in the Philippines
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Loren Ipsum
+                {description}
               </Typography>
             </CardContent>
           </CardActionArea>

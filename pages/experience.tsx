@@ -15,7 +15,9 @@ const Experience: NextPage = () => {
               style={{ height: 400, width: "100vw" }}
               className="grid h-screen place-items-center"
             >
-              <div className="text-5xl p-2 font-bold text-white">Explore Nature</div>
+              <div className="text-5xl p-2 font-bold text-white">
+                Explore Nature
+              </div>
             </div>
           </Parallax>
           <Parallax
@@ -27,7 +29,9 @@ const Experience: NextPage = () => {
               style={{ height: 400, width: "100vw" }}
               className="grid h-screen place-items-center"
             >
-              <div className="text-5xl p-2 font-bold text-white">Interact With Communities</div>
+              <div className="text-5xl p-2 font-bold text-white">
+                Interact With Communities
+              </div>
             </div>
           </Parallax>
 
@@ -40,7 +44,9 @@ const Experience: NextPage = () => {
               style={{ height: 400, width: "100vw" }}
               className="grid h-screen place-items-center"
             >
-              <div className="text-5xl p-2 font-bold text-white">Learn about Agriculture</div>
+              <div className="text-5xl p-2 font-bold text-white">
+                Learn about Agriculture
+              </div>
             </div>
           </Parallax>
 
@@ -53,10 +59,11 @@ const Experience: NextPage = () => {
               style={{ height: 400, width: "100vw" }}
               className="grid h-screen place-items-center"
             >
-              <div className="text-5xl p-2 font-bold text-white">Experience Farming</div>
+              <div className="text-5xl p-2 font-bold text-white">
+                Experience Farming
+              </div>
             </div>
           </Parallax>
-
         </div>
       </div>
     </main>

@@ -1,19 +1,23 @@
 import type { NextPage } from "next";
 
-import React  from "react";
+import React from "react";
 import { Badge, Box } from "@chakra-ui/react";
 
 const Community: NextPage = () => {
-
   return (
     <main>
       <div className="page-wrap grid grid-cols-5 mx-20">
-       
         <div className="col-start-2 col-span-3">
-        <p className="font-bold py-2 text-xl">See whats happening in Vegeverse community:</p>
+          <p className="font-bold py-2 text-xl">
+            See whats happening in Vegeverse community:
+          </p>
 
-          <Box borderWidth="1px" borderRadius="lg" overflow="hidden" className="m-2">
-
+          <Box
+            borderWidth="1px"
+            borderRadius="lg"
+            overflow="hidden"
+            className="m-2"
+          >
             <Box p="6">
               <Box display="flex" alignItems="baseline">
                 <Badge borderRadius="full" px="2" colorScheme="green">
@@ -46,14 +50,18 @@ const Community: NextPage = () => {
               </Box>
 
               <Box display="flex" mt="2" alignItems="center">
-                <Box as="span"  color="gray.600" fontSize="sm">
-                34 comments
+                <Box as="span" color="gray.600" fontSize="sm">
+                  34 comments
                 </Box>
               </Box>
             </Box>
           </Box>
-          <Box borderWidth="1px" borderRadius="lg" overflow="hidden" className="m-2">
-
+          <Box
+            borderWidth="1px"
+            borderRadius="lg"
+            overflow="hidden"
+            className="m-2"
+          >
             <Box p="6">
               <Box display="flex" alignItems="baseline">
                 <Badge borderRadius="full" px="2" colorScheme="green">
@@ -86,14 +94,18 @@ const Community: NextPage = () => {
               </Box>
 
               <Box display="flex" mt="2" alignItems="center">
-                <Box as="span"  color="gray.600" fontSize="sm">
-                12 comments
+                <Box as="span" color="gray.600" fontSize="sm">
+                  12 comments
                 </Box>
               </Box>
             </Box>
           </Box>
-          <Box borderWidth="1px" borderRadius="lg" overflow="hidden" className="m-2">
-
+          <Box
+            borderWidth="1px"
+            borderRadius="lg"
+            overflow="hidden"
+            className="m-2"
+          >
             <Box p="6">
               <Box display="flex" alignItems="baseline">
                 <Badge borderRadius="full" px="2" colorScheme="blue">
@@ -121,22 +133,17 @@ const Community: NextPage = () => {
                 Great harvest from Paddy farm #14
               </Box>
 
-              <Box>
-                Come see the photos
-              </Box>
+              <Box>Come see the photos</Box>
 
               <Box display="flex" mt="2" alignItems="center">
-                <Box as="span"  color="gray.600" fontSize="sm">
-                62 reactions
+                <Box as="span" color="gray.600" fontSize="sm">
+                  62 reactions
                 </Box>
               </Box>
             </Box>
           </Box>
-
         </div>
-        <div>
-
-        </div>
+        <div></div>
       </div>
     </main>
   );

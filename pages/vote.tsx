@@ -12,8 +12,20 @@ export default function Vote() {
     <main>
       <div id="outer-container">
         <div className={styles.container}>
-          <ProgressBar bgcolor={"#6a1b9a"} completed={yesVotes} />
-          <VoteItem />
+          <div className="flex flex-wrap items-center justify-around">
+            <VoteItem
+              src="/orchids.jpg"
+              description="Preserve endangered wild life orchid species in the Philippines"
+            />
+            <VoteItem
+              src="/turtle.jpg"
+              description="Sea turtle conservation in Costa Rica"
+            />
+            <VoteItem
+              src="/pesticides.jpg"
+              description="Advocate for green label pesticides in Indonesia"
+            />
+          </div>
         </div>
       </div>
     </main>
