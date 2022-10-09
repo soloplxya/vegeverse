@@ -7,21 +7,20 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 const VoteItem = (props:any) => {
     return (
-      <Card> 
+      <Card 
+        sx={{ maxWidth: 275, minHeight: 300 }}
+        variant="outlined"> 
          <CardActionArea>
             <CardMedia
-            component="img"
-            height="140"
-            image="/farm.jpg"
-            alt="green iguana"
+                component="img"
+                image="/farm.jpg"
             />
             <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-                Lizard
+                Vote Item #1
             </Typography>
             <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over 6,000
-                species, ranging across all continents except Antarctica
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </Typography>
             </CardContent>
         </CardActionArea>
