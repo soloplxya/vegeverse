@@ -38,10 +38,8 @@ export default function Vote() {
   async function execute() {
     if (typeof window.ethereum !== "undefined") {
       const tokenContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-      const governanceContractAddress =
-        "0x66e58a7a647f8fea8b7cc6b46648390f0417b15312cb75cf42beebaab455714c";
-      const timelockContractAddress =
-        "0xdcf5221755e12b5a6b54dffa3ace674f98d6145690800cf18f23324e9a156be3";
+      const governanceContractAddress = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9";
+      const timelockContractAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
 
       const tokenContract = new ethers.Contract(
         tokenContractAddress,
